@@ -5,11 +5,14 @@
 /tmp
 /out-tsc
 /bazel-out
+app/**/*.js
+app/**/*.js.map
 
 # Node
 /node_modules
 npm-debug.log
 yarn-error.log
+bower_components/
 
 # IDEs and editors
 .idea/
@@ -36,7 +39,13 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+npm-debug.log
+.angular/
 
 # System files
 .DS_Store
 Thumbs.db
+
+# e2e
+e2e/*.js
+e2e/*.map

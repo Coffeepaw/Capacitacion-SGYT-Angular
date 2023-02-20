@@ -1,0 +1,43 @@
+.background {
+  color: black;
+}
+
+.calculator-button {
+  width: 70px;
+  height: 70px;
+  font-size: x-large;
+  font-weight: bold;
+  color: white;
+  background-color: darkslategrey;
+}
+
+.calculate-button {
+  width: 70px;
+  height: 70px;
+  font-size: x-large;
+  font-weight: bold;
+  color: white;
+  background-color: darkslategrey;
+}
+
+.clean-button {
+  color: #9e072a;
+}
+
+.calculator-visor {
+  width: 80px;
+  height: 40px;
+  font-size: large;
+  font-weight: bold;
+  text-align: right;
+  background-color: darkolivegreen;
+}
+
+.calculator-operation {
+  width: 40px;
+  height: 45px;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+  background-color: darkolivegreen;
+}

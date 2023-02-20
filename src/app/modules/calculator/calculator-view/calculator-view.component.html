@@ -1,0 +1,176 @@
+<h1> Calculadora </h1>
+<hr class="rounded">
+<div align="center">
+  <form (ngSubmit)="calculate()">
+    <table>
+      <tr>
+        <td>
+          <input id="inNumber1"
+                 type="number"
+                 name="number1"
+                 [className]="'calculator-visor'"
+                 [(ngModel)]="calculatorRequest.number1">
+        </td>
+        <td>
+          <select id="operation"
+                  name="operation"
+                  [className]="'calculator-operation'"
+                  [(ngModel)]="calculatorRequest.operation">
+            <option [value]="operation.ADDITION">+</option>
+            <option [value]="operation.SUBTRACTION">-</option>
+            <option [value]="operation.MULTIPLICATION">x</option>
+            <option [value]="operation.DIVISION">÷</option>
+            <option [value]="operation.POWER">^</option>
+          </select>
+        </td>
+        <td>
+          <input id="inNumber2"
+                 type="number"
+                 name="number2"
+                 [className]="'calculator-visor'"
+                 [(ngModel)]="calculatorRequest.number2">
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>
+          <button type="button"
+                  (click)="setOperation(operation.ADDITION)"
+                  [className]="'calculator-button'">
+            {{operationSymbols[operation.ADDITION]}}
+          </button>
+        </td>
+        <td>
+          <button type="button"
+                  (click)="setOperation(operation.SUBTRACTION)"
+                  [className]="'calculator-button'">
+            {{operationSymbols[operation.SUBTRACTION]}}
+          </button>
+        </td>
+        <td>
+          <button type="button"
+                  (click)="setOperation(operation.MULTIPLICATION)"
+                  [className]="'calculator-button'">
+            {{operationSymbols[operation.MULTIPLICATION]}}
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button"
+                  (click)="setOperation(operation.DIVISION)"
+                  [className]="'calculator-button'">
+            {{operationSymbols[operation.DIVISION]}}
+          </button>
+        </td>
+        <td>
+          <button type="button"
+                  (click)="setOperation(operation.POWER)"
+                  [className]="'calculator-button'">
+            {{operationSymbols[operation.POWER]}}
+          </button>
+        </td>
+        <td>
+          <button type="button"
+                  (click)="reset()"
+                  [ngClass]="['calculator-button','clean-button']">
+            C
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button"
+                  (click)="setNumber(1)"
+                  [className]="'calculator-button'">
+            1
+          </button>
+        </td>
+        <td>
+          <button type="button"
+                  (click)="setNumber(2)"
+                  [className]="'calculator-button'">
+            2
+          </button>
+        </td>
+        <td>
+          <button type="button"
+                  (click)="setNumber(3)"
+                  [className]="'calculator-button'">
+            3
+          </button>
+        </td>
+
+      </tr>
+      <tr>
+        <td>
+          <button type="button"
+                  (click)="setNumber(4)"
+                  [className]="'calculator-button'">
+            4
+          </button>
+        </td>
+        <td>
+          <button type="button"
+                  (click)="setNumber(5)"
+                  [className]="'calculator-button'">
+            5
+          </button>
+        </td>
+        <td>
+          <button type="button"
+                  (click)="setNumber(6)"
+                  [className]="'calculator-button'">
+            6
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button"
+                  (click)="setNumber(7)"
+                  [className]="'calculator-button'">
+            7
+          </button>
+        </td>
+        <td>
+          <button type="button"
+                  (click)="setNumber(8)"
+                  [className]="'calculator-button'">
+            8
+          </button>
+        </td>
+        <td>
+          <button type="button"
+                  (click)="setNumber(9)"
+                  [className]="'calculator-button'">
+            9
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button"
+                  (click)="delete()"
+                  [className]="'calculator-button'">
+            <=
+          </button>
+        </td>
+        <td>
+          <button type="button"
+                  (click)="setNumber(0)"
+                  [className]="'calculator-button'">
+            0
+          </button>
+        </td>
+        <td align="right">
+          <button type="submit"
+                  [className]="'calculate-button'">
+            =
+          </button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>

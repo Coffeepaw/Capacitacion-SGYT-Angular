@@ -1,0 +1,25 @@
+<h1>Bitacora</h1>
+<hr class="rounded">
+<div align="right">
+  <button (click)="limpiar()"
+          [className]="'limpiar-button'">
+    Limpiar
+  </button>
+</div>
+
+<table>
+  <th>Numero1</th>
+  <th>Operacion</th>
+  <th>Numero2</th>
+  <th>Resultado</th>
+  <th>Comment</th>
+  <tr *ngFor="let register of bitacoraService.getBitacora()"
+  >
+    <td>{{ register.number1 }}</td>
+    <td> {{ register.operationSymbol }} </td>
+    <td>{{ register.number2 }}</td>
+    <td> {{ register.result }}</td>
+    <td> {{ register.comment }}</td>
+  </tr>
+
+</table>
